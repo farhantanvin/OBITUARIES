@@ -1,0 +1,116 @@
+@import '../../utils/sass/variables.scss';
+@import '../../utils/sass/mixins.scss';
+
+.navbar {
+	position: absolute;
+	top: 0;
+	z-index: 999999;
+	width: 100vw;
+	height: 65px;
+	padding: 0;
+	background-color: none;
+	color: $primary-text;
+
+	.navLogo img {
+		position: relative;
+		z-index: 9;
+		height: 50px;
+		margin-left: 30px;
+	}
+
+	.navLinks {
+		margin-right: 20px;
+	}
+
+	.navLink {
+		@include flex();
+
+		padding: 10px 20px !important;
+		color: $primary-text !important;
+		font-size: 15px;
+		transition: all 0.3s;
+	}
+
+	.navLink:hover,
+	.activeLink {
+		color: $primary-color-dark !important;
+	}
+
+	.navbarToggle,
+	.closeNavbarToggle {
+		border: none !important;
+		outline: none !important;
+	}
+
+	.menuIcon,
+	.closeIcon {
+		height: 20px;
+		margin-right: 10px;
+	}
+
+	.navbarCollapse {
+		height: 100%;
+
+		.closeIcon {
+			display: none;
+			height: 20px;
+			margin-top: 5px;
+		}
+	}
+
+	.closeNavbarToggle {
+		position: absolute;
+		top: 10px;
+		right: 0;
+	}
+}
+
+@media (max-width: 767px) {
+	.navbar {
+		.navbarCollapse {
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: block !important;
+			overflow-x: hidden;
+			width: 100vw !important;
+			height: 100vh !important;
+			margin-right: 0;
+			background: $secondary-background;
+			text-align: center;
+			transition: left 0.3s !important;
+
+			.closeIcon {
+				display: block;
+			}
+		}
+
+		.showNavbar {
+			left: 0;
+		}
+
+		.collapseNavbar {
+			left: 100vw;
+		}
+
+		.navLinks {
+			@include flex(center, center, column);
+
+			margin: 90px 0;
+			margin-right: 0;
+
+			.navLink {
+				width: 100vw;
+				margin: 0;
+				padding: 20px 0 !important;
+				color: #fff !important;
+				font-size: 16px;
+			}
+
+			.navLink:hover,
+			.activeLink {
+				background: rgba(255, 255, 255, 0.15) !important;
+			}
+		}
+	}
+}

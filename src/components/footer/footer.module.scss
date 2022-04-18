@@ -1,0 +1,17 @@
+@import '../../utils/sass/variables.scss';
+@import '../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(center, center, column);
+
+	width: 100vw;
+	margin: 0;
+	padding: 20px 40px;
+	background: $secondary-background;
+	color: #fff;
+
+	p {
+		margin: 0;
+		font-size: 14px;
+	}
+}

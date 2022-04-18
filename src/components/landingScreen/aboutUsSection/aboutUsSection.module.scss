@@ -1,0 +1,39 @@
+@import '../../../utils/sass/variables.scss';
+@import '../../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(initial, center, column);
+
+	width: 100vw;
+	padding: 90px 0;
+
+	.flowerIcon {
+		height: 120px;
+	}
+
+	h3 {
+		width: 55%;
+		margin: 70px 0 0 0;
+		font-weight: 300;
+		line-height: 40px;
+		text-align: justify;
+	}
+}
+
+@media (max-width: 992px) {
+	.mainContainer {
+		h3 {
+			width: 75%;
+		}
+	}
+}
+
+@media (max-width: 992px) {
+	.mainContainer {
+		h3 {
+			width: 80%;
+			font-size: 24px;
+			line-height: 30px;
+		}
+	}
+}

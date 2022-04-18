@@ -1,0 +1,109 @@
+@import '../../../utils/sass/variables.scss';
+@import '../../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex();
+
+	position: relative;
+	width: 100vw;
+	min-height: 700px;
+	padding: 50px;
+	background-color: $primary-background;
+
+	button {
+		@include primaryButton();
+
+		padding: 5px 60px;
+		letter-spacing: 3px;
+	}
+
+	.topText {
+		letter-spacing: 2px;
+	}
+
+	.textContainer {
+		margin-bottom: 30px;
+		padding: 50px 30px 50px 6vw;
+
+		a {
+			color: $primary-text;
+		}
+	}
+
+	.orText {
+		display: inline;
+		width: fit-content;
+		margin: 0 20px;
+	}
+
+	.obituariesResultsContainer {
+		width: 100%;
+
+		div {
+			text-align: center;
+		}
+
+		& div:nth-child(1),
+		& div:nth-child(2) {
+			z-index: 10;
+			color: #eee;
+		}
+	}
+
+	.recentObituary {
+		width: 20vw !important;
+		height: 20vw !important;
+		margin: 0 10px;
+		padding: 5px;
+		border-color: #525252 !important;
+		border-radius: 2px !important;
+		background: #525252;
+		box-shadow: none !important;
+
+		p {
+			height: 5%;
+			margin: 0;
+			color: #fff !important;
+		}
+
+		.recentName {
+			margin-top: 5px;
+		}
+
+		.recentYear {
+			margin-top: 5px;
+			font-size: 14px;
+		}
+
+		img {
+			height: 80%;
+			margin-top: 10px;
+			filter: grayscale(100%);
+		}
+	}
+}
+
+@media (max-width: 1200px) {
+	.mainContainer {
+		margin: 0 !important;
+		padding: 50px 20px;
+
+		button {
+			padding: 5px 20px;
+		}
+
+		.recentObituary {
+			width: 35vw !important;
+			height: 35vw !important;
+		}
+	}
+}
+
+@media (max-width: 576px) {
+	.mainContainer {
+		.recentObituary {
+			width: 45vw !important;
+			height: 47vw !important;
+		}
+	}
+}

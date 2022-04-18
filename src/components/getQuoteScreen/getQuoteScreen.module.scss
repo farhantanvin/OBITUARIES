@@ -1,0 +1,81 @@
+@import '../../utils/sass/variables.scss';
+@import '../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(initial, center, column);
+
+	min-height: 100vh;
+	padding: 90px 40px;
+	background-color: $primary-background;
+
+	h3,
+	h4,
+	h5 {
+		margin-bottom: 30px;
+		font-weight: 300;
+		text-align: center;
+	}
+
+	h4 {
+		margin-top: 10px;
+		margin-bottom: 60px;
+	}
+
+	h3 {
+		margin: 20px 50px 40px 50px;
+		color: $primary-color;
+		font-weight: 400;
+	}
+
+	form {
+		padding: 50px 60px;
+		border-radius: 10px;
+		background-color: #fff;
+		-webkit-box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		text-align: center;
+
+		hr {
+			margin: 30px 50px;
+			border-width: 1px;
+		}
+
+		img {
+			height: 50px;
+			margin-bottom: 15px;
+		}
+
+		button {
+			@include primaryButton();
+
+			margin-top: 50px;
+		}
+	}
+
+	.successLottie {
+		height: 100px;
+		margin-top: 80px;
+	}
+
+	.lottieContainer {
+		p {
+			margin-top: 100px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.mainContainer > div {
+		width: 520px;
+		max-width: 520px;
+	}
+}
+
+@media (max-width: 576px) {
+	.mainContainer {
+		padding: 40px 10px;
+	}
+}

@@ -1,0 +1,95 @@
+@import '../../utils/sass/variables.scss';
+@import '../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(initial, center, column);
+
+	min-height: 100vh;
+	padding: 90px 40px;
+	background-color: $primary-background;
+
+	h3 {
+		margin: 20px 50px 40px 50px;
+		color: $primary-color;
+		font-weight: 400;
+		text-align: center;
+	}
+
+	.imageInput input::file-selector-button {
+		display: none;
+	}
+
+	form {
+		padding: 20px 60px 60px 60px;
+		border-radius: 10px;
+		background-color: #fff;
+		-webkit-box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		box-shadow: 2px 1px 5px -1px rgba(0, 0, 0, 0.2);
+		text-align: center;
+
+		button {
+			@include primaryButton();
+
+			margin-top: 50px;
+		}
+
+		select {
+			width: 100%;
+			margin: 0;
+			padding: 6px 7px;
+			border: none;
+			border-right: 7px solid rgba(0, 0, 0, 0);
+			border-radius: 4px;
+			border-radius: 1px;
+			background: rgba(0, 0, 0, 0.1);
+			color: $primary-text;
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+			outline: none;
+		}
+	}
+
+	.radioContainer {
+		display: flex;
+		align-items: center;
+		width: 100px;
+
+		input {
+			width: 40px;
+		}
+	}
+
+	.successLottie {
+		height: 100px;
+		margin-top: 80px;
+	}
+
+	.inputField textarea {
+		height: 100px;
+	}
+
+	.lottieContainer {
+		p {
+			margin-top: 100px;
+			font-weight: 300;
+			text-align: center;
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.mainContainer > div {
+		width: 1020px;
+		max-width: 1020px;
+	}
+}
+
+@media (max-width: 576px) {
+	.mainContainer {
+		padding: 40px 10px;
+
+		form {
+			padding: 20px 30px 60px 30px;
+		}
+	}
+}

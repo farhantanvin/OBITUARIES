@@ -1,0 +1,99 @@
+@import '../../utils/sass/variables.scss';
+@import '../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex(initial, center, column);
+
+	min-height: 100vh;
+	padding: 40px 0 80px 0;
+	background-color: $primary-background;
+
+	.profileContainer {
+		@include flex(initial, center, column);
+
+		position: relative;
+		width: 90vw;
+		margin-top: 100px;
+		padding: 0 90px 40px 90px;
+		border-radius: 20px;
+		background-color: #fff;
+		box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.1);
+	}
+
+	.navsContainer {
+		width: 100%;
+		margin-top: 20px;
+		text-align: left;
+
+		button {
+			margin-right: 25px;
+			border: none !important;
+			background: none;
+			color: $primary-text;
+			box-shadow: none !important;
+			outline: none !important;
+			font-weight: bold;
+		}
+
+		.activeButton {
+			color: $primary-color;
+		}
+	}
+
+	.coverPhoto {
+		object-fit: cover;
+		width: 90vw;
+		height: 300px;
+		border-radius: 20px 20px 0 0;
+		box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.3);
+		object-position: center;
+	}
+
+	.userImage {
+		object-fit: cover;
+		width: 250px;
+		height: 250px;
+		margin: -150px 0 20px 0;
+		border-radius: 50%;
+		box-shadow: 2px 2px 6px 2px rgba(0, 0, 0, 0.3);
+		object-position: center;
+	}
+
+	.description {
+		height: 100%;
+		margin-top: 0;
+	}
+
+	.optionsContnainer {
+		p {
+			color: $primary-color;
+			cursor: pointer;
+		}
+
+		p:last-child {
+			margin-right: 0;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.mainContainer {
+		.profileContainer {
+			width: 95vw;
+			padding: 40px 30px;
+		}
+
+		.userImage {
+			width: 180px;
+			height: 180px;
+		}
+
+		.yearText {
+			margin-bottom: 40px;
+		}
+
+		.description {
+			margin-top: 30px;
+		}
+	}
+}

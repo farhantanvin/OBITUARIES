@@ -1,0 +1,81 @@
+@import '../../../utils/sass/variables.scss';
+@import '../../../utils/sass/mixins.scss';
+
+.mainContainer {
+	@include flex();
+
+	position: relative;
+	width: 100vw;
+	min-height: 100vh;
+	background-color: $primary-background;
+
+	h1,
+	h5,
+	button {
+		opacity: 0;
+	}
+
+	button {
+		@include primaryButton();
+
+		padding: 5px 60px;
+		letter-spacing: 3px;
+	}
+
+	.textContainer {
+		padding: 150px 30px 150px 8vw;
+	}
+}
+
+.blob {
+	@include flex();
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 50px;
+	z-index: 3;
+	z-index: 2;
+	width: 600px;
+	max-width: 90vw;
+	height: 600px;
+	max-height: 90vw;
+	margin: auto;
+	border-radius: 30% 50% 20% 40%;
+	background: url('../../../assets/blob-background.png');
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.03);
+	cursor: pointer;
+	animation: transform 20s ease-in-out infinite both alternate;
+}
+
+@keyframes transform {
+	0%,
+	100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; }
+	20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; }
+	40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; }
+	60% { border-radius: 35% 61% 50% 45% / 28% 28% 68% 68%; }
+	80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; }
+}
+
+@media (max-width: 992px) {
+	.mainContainer .blobContainer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 30vw;
+		z-index: 1;
+		margin: auto;
+		opacity: 0.4;
+	}
+
+	.mainContainer .textContainer {
+		position: relative;
+		z-index: 2;
+		padding: 150px 9vw 150px 9vw;
+	}
+}
