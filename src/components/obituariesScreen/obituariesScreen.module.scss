@@ -7,36 +7,36 @@
 	min-height: 100vh;
 	margin-top: 60px;
 	padding: 40px 0 80px 0;
-	background-color: $secondary-background;
+	background-image: url("../../assets/searchBackgroud.jpg");
 
-	h3 {
-		margin: 20px 50px 40px 50px;
-		color: #fff;
-		font-weight: 400;
-		text-align: center;
+	h4 {
+		color: #48c9ce;
+		font-size: 40px;
+		font-weight: 600;
+		span{
+			color: white;
+		}
 	}
-
+	
 	.addObituaryButton {
 		@include primaryButton();
 
 		align-self: flex-end;
 		margin-right: 50px;
 		margin-bottom: 20px;
-		background-color: #fff;
-		color: $secondary-background;
+		background-color:  #48C9CE;
+		color: #fff;
 		text-decoration: none !important;
 		transition: all 0.3s;
 
 		&:hover {
-			background-color: $primary-color;
-			color: #fff !important;
+			background-color: #fff;
+			color: black !important;
 		}
 	}
 
 	.searchForm {
 		margin-top: 20px;
 		padding: 30px 0;
-		border-radius: 10px;
-		background-color: $secondary-background;
 	}
 }

@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { withRouter } from 'react-router';
-import { Switch, Route } from 'react-router-dom';
-import Navbar from '../navbar';
-import SignInScreen from '../signInScreen';
-import SignUpScreen from '../signUpScreen';
-import LandingScreen from '../landingScreen';
+import { Route, Switch } from 'react-router-dom';
+import CreateObituaryScreen from '../createObituaryScreen';
 import Footer from '../footer';
 import GetQuoteScreen from '../getQuoteScreen';
-import CreateObituaryScreen from '../createObituaryScreen';
+import LandingScreen from '../landingScreen';
+import Navbar from '../navbar';
 import ObituariesScreen from '../obituariesScreen';
-import PricingScreen from '../pricingScreen';
+import ObituariesVideoComponent from '../obituariesVideoScreen/ObituariesVideoScreen';
 import ObituaryScreen from '../obituaryScreen';
+import PricingScreen from '../pricingScreen';
+import SignInScreen from '../signInScreen';
+import SignUpScreen from '../signUpScreen';
 
 function App(props) {
 	const [showNavbar, setShowNavbar] = useState(false);
@@ -32,6 +33,7 @@ function App(props) {
 				<Route path="/obituaries" component={ObituariesScreen} exact />
 				<Route path="/plans-and-pricing" component={PricingScreen} exact />
 				<Route path="/obituary/:id" component={ObituaryScreen} exact />
+				<Route path="/video" component={ObituariesVideoComponent} exact />
 			</Switch>
 			<Footer />
 		</div>

@@ -6,7 +6,7 @@
 
 	min-height: 100vh;
 	padding: 40px 0 80px 0;
-	background-color: $primary-background;
+	background: rgba(213, 240, 242, 1);
 
 	.profileContainer {
 		@include flex(initial, center, column);

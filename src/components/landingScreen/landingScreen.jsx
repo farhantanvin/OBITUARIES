@@ -1,10 +1,10 @@
 import React from 'react';
-import Styles from './landingScreen.module.scss';
+import PricingScreen from '../pricingScreen/pricingScreen';
 import HeroSection from './heroSection';
-import SearchObituariesSection from './searchObituariesSection';
-import RecentObituariesSection from './recentObituariesSection';
+import Styles from './landingScreen.module.scss';
 import PlanRemembranceSection from './planRemembranceSection';
-import AboutUsSection from './aboutUsSection';
+import RecentObituariesSection from './recentObituariesSection';
+import SearchObituariesSection from './searchObituariesSection';
 
 class LandingScreen extends React.Component {
 	render() {
@@ -14,7 +14,7 @@ class LandingScreen extends React.Component {
 				<SearchObituariesSection history={this.props.history} />
 				<RecentObituariesSection history={this.props.history} />
 				<PlanRemembranceSection history={this.props.history} />
-				<AboutUsSection />
+				<PricingScreen />
 			</div>
 		);
 	}

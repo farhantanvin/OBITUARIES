@@ -1,12 +1,12 @@
-import React, { createRef } from 'react';
-import { Alert, Row, Col } from 'react-bootstrap';
+import { City, Country, State } from 'country-state-city';
 import gsap from 'gsap';
-import { Country, State, City } from 'country-state-city';
-import Styles from './searchObituaryForm.module.scss';
-import Spinner from '../spinner';
+import React, { createRef } from 'react';
+import { Alert, Col, Row } from 'react-bootstrap';
 import ObituariesData from '../../data/obituaries.json';
 import ObituarySearchResult from '../obituarySearchResult';
 import PostMessageModal from '../postMessageModal';
+import Spinner from '../spinner';
+import Styles from './searchObituaryForm.module.scss';
 
 class SearchObituaryForm extends React.Component {
 	constructor(props) {
@@ -206,12 +206,12 @@ class SearchObituaryForm extends React.Component {
 						</select>
 					</Col>
 				</Row>
-				<input ref={(e) => { this.keyword = e; }} className={Styles.searchKeywordInput} type="text" placeholder="Search by keyword" />
+
 				<button className={Styles.searchButton} onClick={() => { this.searchObituaries(); }}>
 					{
 						this.state.searchingObituaries
 							? <Spinner className={Styles.spinner} />
-							: 'SEARCH'
+							: 'Search'
 					}
 				</button>
 				<p className={Styles.noSearchResultsText}>{this.state.noSearchResults ? 'No Search Results Found!' : null}</p>

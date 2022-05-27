@@ -2,16 +2,163 @@
 @import '../../utils/sass/mixins.scss';
 
 .mainContainer {
-	@include flex(center, center, column);
-
-	width: 100vw;
+	@include flex(flex-start, flex-start, column);
 	margin: 0;
-	padding: 20px 40px;
-	background: $secondary-background;
-	color: #fff;
+	padding: 50px 200px 10px 200px;
+	box-sizing: border-box;
+	font-family: sans-serif;
+	background: #041b22;
+	color: #3ba3ae;
+}
 
-	p {
-		margin: 0;
-		font-size: 14px;
+.subContainer{
+	@include flex(flex-start, flex-start, row);
+	width: 100%;
+	gap:40px;
+}
+
+.brand{
+  padding: 15px 15px 15px 0px;
+  margin: 0;
+  width: 200px;
+  height: 70px;
+}
+
+.box{
+	flex-basis: calc(100%/4);
+	h4{
+		color: #c1c1c1;
+		margin-bottom: 40px;
+	}
+	input{
+ 	    height: 50px;
+		width: 150px;
+		border-radius: 4px;
+		background-color: #0d303a;
+		color: #f1f1f1;
+		border: #0d303a;
+		text-align: center;
+	}
+	input::-webkit-input-placeholder{
+		color: #67797E;
+		opacity: 1;
+	}
+
+	input:-moz-placeholder {
+	color: #67797E;
+	}
+	
+	button{
+		height: 50px;
+		width: 70px;
+		font-weight: 50;
+		border-radius: 4px;
+		background: linear-gradient(101.58deg, #47C7CD -5.23%, #1D8797 106.38%);
+		border: #30a3af;
+		color: #f1f1f1;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		cursor: pointer;
 	}
 }
+
+.box1{
+	flex-basis: calc(100%/2);
+}
+.box2{
+	flex-basis: calc(100%/2);
+}
+
+.socials{
+	@include flex(flex-start, flex-start, row);
+    padding: 0;
+    list-style: none;
+    margin: 1rem 0 3rem 0;
+	li{
+		margin: 0px 15px 0px 0px;
+	}
+	
+	a{
+		text-decoration: none;
+		color: #fff;
+		background-color: #126c72;
+		border: 5px solid #126c72;
+		padding: 5px;
+		border-radius: 50%;
+	}
+	
+	a i{
+		font-size: 1.1rem;
+		width: 100px;
+		transition: color .4s ease;
+	}
+	
+	a:hover i{
+		color: aqua;
+	}
+}
+
+.contacts{
+	@include flex(flex-start, flex-start, column);
+	padding: 0;
+	padding: 0;
+    list-style: none;
+	flex-wrap: wrap;
+    margin: 1rem 0 3rem 0;
+
+	li{
+		margin: 0px 15px 10px 0px;
+	}
+	i{
+		color: #fff;
+		font-size: 1.1rem;
+		width: 100px;
+		transition: color .4s ease;
+	}
+	span{
+		text-align: center;
+		padding-left: 5px;
+	}
+}
+
+.footerMenu{
+	@include flex(flex-end, flex-start, row);
+	padding: 0;
+	list-style: none;
+	flex-wrap: wrap;
+
+	li{
+		margin: 0px 15px 10px 0px;
+	}
+	a{
+		color: #3ba3ae;
+		text-decoration: none;
+		font-size: 1.1rem;
+		width: 100px;
+		transition: color .4s ease;
+	}
+	a:hover{
+		color: aqua;
+	}
+ }
+
+
+
+ @media (max-width: 767px) {
+	.mainContainer {
+		@include flex(flex-start, flex-center, column);
+		padding: 50px 20px 10px 20px;
+		gap:10px
+	}
+	.subContainer{
+		@include flex(flex-start, flex-center, column);
+	}
+	.box2{
+		display: none;
+	}
+	.box1{
+		flex-basis: 100%;
+	}
+
+ }
