@@ -1,109 +1,162 @@
-@import '../../../utils/sass/variables.scss';
-@import '../../../utils/sass/mixins.scss';
+@import "../../../utils/sass/variables.scss";
+@import "../../../utils/sass/mixins.scss";
 
 .mainContainer {
-	@include flex();
+  @include flex();
 
-	position: relative;
-	width: 100vw;
-	min-height: 700px;
-	padding: 50px;
-	background-color: $primary-background;
+  position: relative;
+  width: 100vw;
+  min-height: 700px;
+  padding: 50px;
+  background-color: $primary-background;
 
-	button {
-		@include primaryButton();
+  .topText {
+    letter-spacing: 2px;
+  }
 
-		padding: 5px 60px;
-		letter-spacing: 3px;
-	}
+  .textContainer {
+    margin-bottom: 30px;
+    padding: 50px 30px 50px 6vw;
 
-	.topText {
-		letter-spacing: 2px;
-	}
+    a {
+      color: $primary-text;
+    }
+  }
 
-	.textContainer {
-		margin-bottom: 30px;
-		padding: 50px 30px 50px 6vw;
+  .orText {
+    display: inline;
+    width: fit-content;
+    margin: 0 20px;
+  }
 
-		a {
-			color: $primary-text;
-		}
-	}
+  .obituariesResultsContainer {
+    width: 100%;
 
-	.orText {
-		display: inline;
-		width: fit-content;
-		margin: 0 20px;
-	}
+    div {
+      text-align: center;
+    }
 
-	.obituariesResultsContainer {
-		width: 100%;
+    & div:nth-child(1),
+    & div:nth-child(2) {
+      z-index: 10;
+      color: #eee;
+    }
+  }
 
-		div {
-			text-align: center;
-		}
+  .main_heading {
+    font-size: 3rem;
+    font-weight: 600;
+    color: #163c49;
+    .styled_heading {
+      color: #3ba3ae;
+    }
+  }
 
-		& div:nth-child(1),
-		& div:nth-child(2) {
-			z-index: 10;
-			color: #eee;
-		}
-	}
+  .btn_contact {
+    background: linear-gradient(to right, #41bec6, #1e7f8c);
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.7s;
+  }
+  .recentObituary.even_slide {
+    margin-top: 40px !important;
+  }
+  .btn_learn_more {
+    border: 2px solid #1e7f8c;
+    padding: 10px 20px;
+    background: none;
+    color: #1e7f8c;
+    border-radius: 5px;
+    transition: all 0.4s linear;
+  }
+  .btn_learn_more:hover {
+    background: #1e7f8c;
+    color: #fff;
+    border: 2px solid #1e7f8c;
+  }
+  .recentObituary {
+    width: 16vw !important;
+    height: 20vw !important;
+    margin: 0 10px;
+    padding: 5px;
+    border-color: #1f757fb5 !important;
+    border-radius: 2px !important;
+    background: #1f757fb5;
+    box-shadow: none !important;
 
-	.recentObituary {
-		width: 20vw !important;
-		height: 20vw !important;
-		margin: 0 10px;
-		padding: 5px;
-		border-color: #525252 !important;
-		border-radius: 2px !important;
-		background: #525252;
-		box-shadow: none !important;
+    p {
+      height: 5%;
+      margin: 0;
+      color: #fff !important;
+    }
 
-		p {
-			height: 5%;
-			margin: 0;
-			color: #fff !important;
-		}
+    .recentName {
+      margin-top: 5px;
+    }
 
-		.recentName {
-			margin-top: 5px;
-		}
+    .recentYear {
+      margin-top: 5px;
+      font-size: 14px;
+    }
 
-		.recentYear {
-			margin-top: 5px;
-			font-size: 14px;
-		}
-
-		img {
-			height: 80%;
-			margin-top: 10px;
-			filter: grayscale(100%);
-		}
-	}
+    img {
+      height: 80%;
+      margin-top: 0px;
+      filter: grayscale(100%);
+    }
+  }
+}
+.text_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 @media (max-width: 1200px) {
-	.mainContainer {
-		margin: 0 !important;
-		padding: 50px 20px;
+  .mainContainer {
+    margin: 0 !important;
+    padding: 50px 20px;
 
-		button {
-			padding: 5px 20px;
-		}
-
-		.recentObituary {
-			width: 35vw !important;
-			height: 35vw !important;
-		}
-	}
+    .recentObituary {
+      width: 28vw !important;
+      height: 35vw !important;
+    }
+  }
 }
 
 @media (max-width: 576px) {
-	.mainContainer {
-		.recentObituary {
-			width: 45vw !important;
-			height: 47vw !important;
-		}
-	}
+  .mainContainer {
+    .recentObituary {
+      width: 45vw !important;
+      height: 47vw !important;
+    }
+  }
+}
+@media (max-width: 425px) {
+  .main_heading {
+    font-size: 2rem !important;
+  }
+
+  .btn_contact {
+    padding: 7px 10px !important;
+  }
+
+  .btn_learn_more {
+    padding: 7px 10px !important;
+  }
+  .recentObituary {
+    p {
+      height: 5%;
+      font-size: 12px !important;
+    }
+
+    img {
+      height: 55% !important;
+      margin-top: 0px;
+      filter: grayscale(100%);
+    }
+  }
 }

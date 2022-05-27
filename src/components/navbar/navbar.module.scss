@@ -1,116 +1,174 @@
-@import '../../utils/sass/variables.scss';
-@import '../../utils/sass/mixins.scss';
+@import "../../utils/sass/variables.scss";
+@import "../../utils/sass/mixins.scss";
 
 .navbar {
-	position: absolute;
-	top: 0;
-	z-index: 999999;
-	width: 100vw;
-	height: 65px;
-	padding: 0;
-	background-color: none;
-	color: $primary-text;
+  position: absolute;
+  top: 0;
+  z-index: 999999;
+  width: 100vw;
+  height: 65px;
+  padding: 10px 100px;
+  background-color: none;
+  color: $primary-text;
 
-	.navLogo img {
-		position: relative;
-		z-index: 9;
-		height: 50px;
-		margin-left: 30px;
-	}
+  .navLogo img {
+    position: relative;
+    z-index: 9;
+    height: 50px;
+    margin-left: 30px;
+  }
 
-	.navLinks {
-		margin-right: 20px;
-	}
+  .navLinks {
+    margin-right: 20px;
+  }
 
-	.navLink {
-		@include flex();
+  .navLink {
+    @include flex();
 
-		padding: 10px 20px !important;
-		color: $primary-text !important;
-		font-size: 15px;
-		transition: all 0.3s;
-	}
+    padding: 10px 20px !important;
+    color: #cbcbcb !important;
+    font-size: 20px;
+    font-weight: 400;
+    transition: all 0.3s;
+  }
 
-	.navLink:hover,
-	.activeLink {
-		color: $primary-color-dark !important;
-	}
+  .navLink:hover,
+  .activeLink {
+    color: #3fbac2 !important;
+  }
 
-	.navbarToggle,
-	.closeNavbarToggle {
-		border: none !important;
-		outline: none !important;
-	}
+  .navbarToggle,
+  .closeNavbarToggle {
+    border: none !important;
+    outline: none !important;
+  }
 
-	.menuIcon,
-	.closeIcon {
-		height: 20px;
-		margin-right: 10px;
-	}
+  .menuIcon,
+  .closeIcon {
+    height: 20px;
+    margin-right: 10px;
+  }
 
-	.navbarCollapse {
-		height: 100%;
+  .navbarCollapse {
+    height: 100%;
 
-		.closeIcon {
-			display: none;
-			height: 20px;
-			margin-top: 5px;
-		}
-	}
+    .closeIcon {
+      display: none;
+      height: 20px;
+      margin-top: 5px;
+    }
+  }
 
-	.closeNavbarToggle {
-		position: absolute;
-		top: 10px;
-		right: 0;
-	}
+  .closeNavbarToggle {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+  .recent_loss {
+    background: linear-gradient(to right, #41bec6, #1e7f8c);
+    padding: 10px 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.7s;
+  }
 }
 
 @media (max-width: 767px) {
-	.navbar {
-		.navbarCollapse {
-			position: fixed;
-			top: 0;
-			left: 0;
-			display: block !important;
-			overflow-x: hidden;
-			width: 100vw !important;
-			height: 100vh !important;
-			margin-right: 0;
-			background: $secondary-background;
-			text-align: center;
-			transition: left 0.3s !important;
+  .navbar {
+    .navbarCollapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block !important;
+      overflow-x: hidden;
+      width: 100vw !important;
+      height: 100vh !important;
+      margin-right: 0;
+      background: #1f4653;
+      text-align: center;
+      transition: left 0.3s !important;
 
-			.closeIcon {
-				display: block;
-			}
-		}
+      .closeIcon {
+        display: block;
+      }
+    }
 
-		.showNavbar {
-			left: 0;
-		}
+    .showNavbar {
+      left: 0;
+    }
 
-		.collapseNavbar {
-			left: 100vw;
-		}
+    .collapseNavbar {
+      left: 100vw;
+    }
 
-		.navLinks {
-			@include flex(center, center, column);
+    .navLinks {
+      @include flex(center, center, column);
 
-			margin: 90px 0;
-			margin-right: 0;
+      margin: 90px 0;
+      margin-right: 0;
 
-			.navLink {
-				width: 100vw;
-				margin: 0;
-				padding: 20px 0 !important;
-				color: #fff !important;
-				font-size: 16px;
-			}
+      .navLink {
+        width: 100vw;
+        margin: 0;
+        padding: 20px 0 !important;
+        color: #fff !important;
+        font-size: 16px;
+      }
 
-			.navLink:hover,
-			.activeLink {
-				background: rgba(255, 255, 255, 0.15) !important;
-			}
-		}
-	}
+      .navLink:hover,
+      .activeLink {
+        background: rgba(255, 255, 255, 0.15) !important;
+      }
+    }
+  }
+}
+@media (max-width: 425px) {
+  .navbar {
+    padding: 0px !important;
+    .navbarCollapse {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: block !important;
+      overflow-x: hidden;
+      width: 100vw !important;
+      height: 100vh !important;
+      margin-right: 0;
+      text-align: center;
+      transition: left 0.3s !important;
+
+      .closeIcon {
+        display: block;
+      }
+    }
+
+    .showNavbar {
+      left: 0;
+    }
+
+    .collapseNavbar {
+      left: 100vw;
+    }
+
+    .navLinks {
+      @include flex(center, center, column);
+
+      margin: 90px 0;
+      margin-right: 0;
+
+      .navLink {
+        width: 100vw;
+        margin: 0;
+        padding: 20px 0 !important;
+        color: #fff !important;
+        font-size: 16px;
+      }
+
+      .navLink:hover,
+      .activeLink {
+        background: rgba(255, 255, 255, 0.15) !important;
+      }
+    }
+  }
 }

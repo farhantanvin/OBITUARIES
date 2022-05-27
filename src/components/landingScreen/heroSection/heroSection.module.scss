@@ -1,81 +1,83 @@
-@import '../../../utils/sass/variables.scss';
-@import '../../../utils/sass/mixins.scss';
+@import "../../../utils/sass/variables.scss";
+@import "../../../utils/sass/mixins.scss";
 
 .mainContainer {
-	@include flex();
-
-	position: relative;
-	width: 100vw;
-	min-height: 100vh;
-	background-color: $primary-background;
-
-	h1,
-	h5,
-	button {
-		opacity: 0;
-	}
-
-	button {
-		@include primaryButton();
-
-		padding: 5px 60px;
-		letter-spacing: 3px;
-	}
-
-	.textContainer {
-		padding: 150px 30px 150px 8vw;
-	}
+  @include flex();
+  background: #1f4653;
+  .textContainer {
+    padding: 150px 0;
+  }
+}
+.main_text {
+  font-size: 35px !important;
+  font-weight: 600 !important;
+}
+.hero_img {
+  position: absolute;
+  opacity: 0.1;
+  object-fit: cover;
+  width: -webkit-fill-available;
+}
+.btn_contact {
+  border: 2px solid #1e7f8c;
+  padding: 10px 20px;
+  background: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.4s linear;
+}
+.btn_contact:hover {
+  background: #1e7f8c;
+  color: #fff;
+  border: 2px solid #1e7f8c;
 }
 
-.blob {
-	@include flex();
-
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 50px;
-	z-index: 3;
-	z-index: 2;
-	width: 600px;
-	max-width: 90vw;
-	height: 600px;
-	max-height: 90vw;
-	margin: auto;
-	border-radius: 30% 50% 20% 40%;
-	background: url('../../../assets/blob-background.png');
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
-	box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.03);
-	cursor: pointer;
-	animation: transform 20s ease-in-out infinite both alternate;
+.btn_learn_more {
+  background: linear-gradient(to right, #41bec6, #1e7f8c);
+  padding: 10px 20px;
+  border: none;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.7s;
 }
 
-@keyframes transform {
-	0%,
-	100% { border-radius: 33% 67% 70% 30% / 30% 30% 70% 70%; }
-	20% { border-radius: 37% 63% 51% 49% / 37% 65% 35% 63%; }
-	40% { border-radius: 36% 64% 64% 36% / 64% 48% 52% 36%; }
-	60% { border-radius: 35% 61% 50% 45% / 28% 28% 68% 68%; }
-	80% { border-radius: 40% 60% 42% 58% / 41% 51% 49% 59%; }
+.second_slide_title {
+  padding: 0px 20px;
+  font-size: 30px !important;
+  font-weight: 600 !important;
 }
-
+.second_slide_container {
+  padding: 50px;
+}
 @media (max-width: 992px) {
-	.mainContainer .blobContainer {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 30vw;
-		z-index: 1;
-		margin: auto;
-		opacity: 0.4;
-	}
+  .mainContainer .blobContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 30vw;
+    z-index: 1;
+    margin: auto;
+    opacity: 0.4;
+  }
 
-	.mainContainer .textContainer {
-		position: relative;
-		z-index: 2;
-		padding: 150px 9vw 150px 9vw;
-	}
+  .mainContainer .textContainer {
+    position: relative;
+    z-index: 2;
+    padding: 150px 9vw 150px 9vw;
+  }
+}
+@media (max-width: 425px) {
+  .main_text {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+  }
+
+  .btn_contact {
+    padding: 5px 15px;
+  }
+
+  .btn_learn_more {
+    padding: 5px 15px;
+  }
 }
