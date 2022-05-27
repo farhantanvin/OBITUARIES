@@ -78,12 +78,12 @@
   }
   .recentObituary {
     width: 16vw !important;
-    height: 20vw !important;
+    height: 23vw !important;
     margin: 0 10px;
     padding: 5px;
     border-color: #1f757fb5 !important;
     border-radius: 2px !important;
-    background: #1f757fb5;
+    background: linear-gradient(to right, #41bec6, #1e7f8c);
     box-shadow: none !important;
 
     p {
@@ -103,8 +103,8 @@
 
     img {
       height: 80%;
+      width: 100%;
       margin-top: 0px;
-      filter: grayscale(100%);
     }
   }
 }

@@ -24,6 +24,32 @@ code {
   font-size: 14px;
   border: none;
   box-shadow: none;
+  position: relative;
+  left: -48px;
+}
+.rec.rec-arrow-right,
+.rec.rec-arrow-left {
+  width: 33px;
+  height: 33px;
+  min-width: 33px;
+  line-height: 33px;
+  background-color: #12929d;
+  color: #fff;
+  font-size: 14px;
+  border: none;
+  box-shadow: none;
+  position: relative;
+  left: -48px;
+}
+.rec.rec-arrow-right {
+  position: relative;
+  right: -45px;
+  z-index: 99999;
+}
+.rec.rec-arrow-left {
+  position: relative;
+  left: 45px;
+  z-index: 99999;
 }
 .rec.rec-arrow-right:hover:enabled,
 .rec.rec-arrow-left:hover:enabled {

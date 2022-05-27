@@ -25,7 +25,7 @@ function App(props) {
       )
     );
   }, [props]);
-  
+
   return (
     <div>
       <Switch>
