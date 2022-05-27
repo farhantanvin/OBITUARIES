@@ -16,15 +16,10 @@
 }
 
 .book_img {
-  transform: translateZ(-100px) rotateY(23deg);
-  box-shadow: 3px -1px 4px -1px #383535;
-
-  border-radius: 0px 10px 10px 0px;
+  box-shadow: 3px -1px 7px #9e9e9e;
 }
 .book_img_odd {
-  transform: translateZ(-100px) rotateY(-29deg);
-  box-shadow: -1px 0px 4px 1px #383535;
-  border-radius: 10px 0px 0px 10px;
+  box-shadow: 3px -1px 7px #9e9e9e;
 }
 .pageDiv {
   padding: 0px !important;

@@ -261,7 +261,7 @@ export default function BookModal(props) {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ zIndex: "999999999" }}
+        style={{ zIndex: "999999999", }}
       >
         <Modal.Body>
           <HTMLFlipBook

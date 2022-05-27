@@ -14,8 +14,10 @@ class LandingScreen extends React.Component {
         <div>
           <ObituariesVideoScreen></ObituariesVideoScreen>
         </div>
+
         <SearchObituariesSection history={this.props.history} />
         <RecentObituariesSection history={this.props.history} />
+        {/* <PlanRemembranceSection history={this.props.history} /> */}
         <PricingScreen />
       </div>
     );
