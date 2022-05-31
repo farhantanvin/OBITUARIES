@@ -1,10 +1,73 @@
-import React from "react";
-import { Row, Col } from "react-bootstrap";
-import ObituariesData from "../../../data/obituaries.json";
-import Styles from "./recentObituariesSection.module.scss";
+import { useState } from "react";
+import { Col, Row } from "react-bootstrap";
 import Carousel from "react-elastic-carousel";
+import img1 from "../../../assets/recent-1.jpg";
+import img2 from "../../../assets/recent-2.jpg";
+import Styles from "./recentObituariesSection.module.scss";
 
-export default function recentObituariesSection() {
+export default function RecentObituariesSection() {
+  const [obituariesData, setObituariesData] = useState([
+    {
+      id: "e72f0834-c9ff-32d0-8dc9-79a13caeafe1",
+      image: img1,
+      firstName: "Jason",
+      lastName: "V.Little",
+      gender: true,
+      country: "Ireland",
+      state: "New Hampshire",
+      city: "Groverfort",
+      imgNumber: "20",
+      dob: "Octobor 7, 1946",
+      dop: "March 14, 2019",
+      yearOfBirth: "1990",
+      yearOfPassing: "1975",
+    },
+    {
+      id: "0c7a439b-a596-3f1f-9ea0-9f9dc081702c",
+      firstName: "Zorja",
+      lastName: "Lady Hie",
+      image: img2,
+      gender: false,
+      country: "Brunei Darussalam",
+      state: "Alaska",
+      city: "Millsville",
+      imgNumber: "8",
+      dob: "Octobor 7, 1946",
+      dop: "March 14, 2019",
+      yearOfBirth: "2004",
+      yearOfPassing: "1970",
+    },
+    {
+      id: "e72f0834-c9ff-32d0-8dc9-79a13caeafe1",
+      image: img1,
+      firstName: "Jason",
+      lastName: "V.Little",
+      gender: true,
+      country: "Ireland",
+      state: "New Hampshire",
+      city: "Groverfort",
+      imgNumber: "20",
+      dob: "Octobor 7, 1946",
+      dop: "March 14, 2019",
+      yearOfBirth: "1990",
+      yearOfPassing: "1975",
+    },
+    {
+      id: "0c7a439b-a596-3f1f-9ea0-9f9dc081702c",
+      firstName: "Zorja",
+      lastName: "Lady Hie",
+      image: img2,
+      gender: false,
+      country: "Brunei Darussalam",
+      state: "Alaska",
+      city: "Millsville",
+      imgNumber: "8",
+      dob: "Octobor 7, 1946",
+      dop: "March 14, 2019",
+      yearOfBirth: "2004",
+      yearOfPassing: "1970",
+    },
+  ]);
   return (
     <Row className={Styles.mainContainer}>
       <Col lg={12} xl={6} className={Styles.textContainer}>
@@ -31,7 +94,7 @@ export default function recentObituariesSection() {
       </Col>
       <Col lg={12} xl={6} className={Styles.recentsContainer}>
         <Carousel pagination={false} itemsToShow={2}>
-          {ObituariesData.slice(5).map((obituary, index) => (
+          {obituariesData.map((obituary, index) => (
             <div
               className={`${Styles.recentObituary} ${
                 index % 2 === 1 ? Styles.even_slide : Styles.odd_slide
@@ -40,16 +103,15 @@ export default function recentObituariesSection() {
             >
               <img
                 className={Styles.recentImage}
-                src={`https://minimaltoolkit.com/images/randomdata/${
-                  obituary.gender ? "male" : "female"
-                }/${obituary.imgNumber}.jpg`}
+                src={obituary.image}
                 alt="profile"
               />
               <div className={Styles.text_wrapper}>
                 <p
                   className={Styles.recentName}
                 >{`${obituary.firstName} ${obituary.lastName}`}</p>
-                <p className={Styles.recentYear}>({obituary.yearOfBirth})</p>
+                <p className={Styles.dob}>{obituary.dob}</p>
+                <p className={Styles.dob}>{obituary.dop}</p>
               </div>
             </div>
           ))}
