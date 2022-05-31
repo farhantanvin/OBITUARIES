@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Row, Col, Carousel } from "react-bootstrap";
-import Styles from "./heroSection.module.scss";
+import { Carousel, Col, Row } from "react-bootstrap";
 import slide1 from "../../../assets/first_slide.png";
+import slie2_img from "../../../assets/heroSlide.png";
 import slide2 from "../../../assets/second_slide.jpg";
-import slie2_img from "../../../assets/rosy_adley.png";
 import BookModal from "../../modal";
+import Styles from "./heroSection.module.scss";
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [modalShow, setModalShow] = useState(false);
