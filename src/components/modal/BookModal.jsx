@@ -1,31 +1,27 @@
 import React, { useRef, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { BiSkipPrevious } from "react-icons/bi";
+import { RiSkipForwardMiniFill } from "react-icons/ri";
 import HTMLFlipBook from "react-pageflip";
-import Styles from "./bookModal.module.scss";
-import { PageCover } from "./PageCover";
-import childhood1 from "../../assets/books/Childhood ana Youth.svg";
 import childhood2 from "../../assets/books/Childhood ana Youth 2nd.svg";
-import lifecycle1 from "../../assets/books/HIS CIRCLE OF LIFE.svg";
+import childhood1 from "../../assets/books/Childhood ana Youth.svg";
 import lifecycle2 from "../../assets/books/HIS CIRCLE OF LIFE 2nd.svg";
-import loving1 from "../../assets/books/In Loving Memory.svg";
+import lifecycle1 from "../../assets/books/HIS CIRCLE OF LIFE.svg";
 import loving2 from "../../assets/books/In Loving Memory 2nd.svg";
-import lhistory from "../../assets/books/LIFE HISTORY in picture.svg";
+import loving1 from "../../assets/books/In Loving Memory.svg";
 import lhistory2 from "../../assets/books/LIFE HISTORY in picture 2nd.svg";
-import lhistoryjohn from "../../assets/books/LIFE HISTORY OF John smith.svg";
+import lhistory from "../../assets/books/LIFE HISTORY in picture.svg";
 import lhistoryjohn2 from "../../assets/books/LIFE HISTORY OF John smith 2nd.svg";
-import loveLife from "../../assets/books/Love and Life.svg";
+import lhistoryjohn from "../../assets/books/LIFE HISTORY OF John smith.svg";
 import loveLife2 from "../../assets/books/Love and Life 2nd.svg";
-import page1 from "../../assets/books/Page 1.svg";
-import page2 from "../../assets/books/Page 2.svg";
-import page3 from "../../assets/books/Page 3.svg";
-import page4 from "../../assets/books/Page 5.svg";
-import page5 from "../../assets/books/Page 6.svg";
-import page6 from "../../assets/books/Page 7.svg";
-import page7 from "../../assets/books/Page 8.svg";
-import page8 from "../../assets/books/Page 9.svg";
+import loveLife from "../../assets/books/Love and Life.svg";
+import page29 from "../../assets/books/Obituary Book Golden back Cover.svg";
+import {
+  default as page1,
+  default as page11,
+} from "../../assets/books/Page 1.svg";
 import page9 from "../../assets/books/Page 10.svg";
 import page10 from "../../assets/books/Page 11.svg";
-import page11 from "../../assets/books/Page 1.svg";
 import page12 from "../../assets/books/Page 12.svg";
 import page13 from "../../assets/books/Page 13.svg";
 import page14 from "../../assets/books/Page 14.svg";
@@ -34,6 +30,7 @@ import page16 from "../../assets/books/Page 16.svg";
 import page17 from "../../assets/books/Page 17.svg";
 import page18 from "../../assets/books/Page 18.svg";
 import page19 from "../../assets/books/Page 19.svg";
+import page2 from "../../assets/books/Page 2.svg";
 import page20 from "../../assets/books/Page 20.svg";
 import page21 from "../../assets/books/Page 21.svg";
 import page22 from "../../assets/books/Page 22.svg";
@@ -43,8 +40,14 @@ import page25 from "../../assets/books/Page 25.svg";
 import page26 from "../../assets/books/Page 26.svg";
 import page27 from "../../assets/books/Page 27.svg";
 import page28 from "../../assets/books/Page 28.svg";
-import { BiSkipPrevious } from "react-icons/bi";
-import { RiSkipForwardMiniFill } from "react-icons/ri";
+import page3 from "../../assets/books/Page 3.svg";
+import page4 from "../../assets/books/Page 5.svg";
+import page5 from "../../assets/books/Page 6.svg";
+import page6 from "../../assets/books/Page 7.svg";
+import page7 from "../../assets/books/Page 8.svg";
+import page8 from "../../assets/books/Page 9.svg";
+import Styles from "./bookModal.module.scss";
+import { PageCover } from "./PageCover";
 export default function BookModal(props) {
   const book = useRef();
   const [images, setImages] = useState([
@@ -253,6 +256,11 @@ export default function BookModal(props) {
       name: "page28",
       location: page28,
     },
+    {
+      id: 42,
+      name: "page29",
+      location: page29,
+    },
   ]);
   return (
     <>
@@ -261,7 +269,7 @@ export default function BookModal(props) {
         size="lg"
         aria-labelledby="contained-modal-title-vcenter"
         centered
-        style={{ zIndex: "999999999", }}
+        style={{ zIndex: "999999999" }}
       >
         <Modal.Body>
           <HTMLFlipBook
