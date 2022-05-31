@@ -1,9 +1,9 @@
 import React from "react";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Styles from "../signInScreen/signInScreen.module.scss";
-import InputField from "../inputField";
 import FlowerIcon from "../../assets/flower.png";
+import InputField from "../inputField";
+import Styles from "../signInScreen/signInScreen.module.scss";
 
 class SignUp extends React.Component {
   render() {
@@ -57,7 +57,6 @@ class SignUp extends React.Component {
               </Link>
             </p>
           </form>
-          '
         </Col>
       </div>
     );
