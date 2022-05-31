@@ -145,7 +145,7 @@
 
 
 
- @media (max-width: 767px) {
+ @media (max-width: 768px) {
 	.mainContainer {
 		@include flex(flex-start, flex-center, column);
 		padding: 50px 20px 10px 20px;
@@ -153,6 +153,12 @@
 	}
 	.subContainer{
 		@include flex(flex-start, flex-center, column);
+	}.box{
+		input{
+			width: 30vw;
+		}button{
+			width: 20vw;
+		}
 	}
 	.box2{
 		display: none;

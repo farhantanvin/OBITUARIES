@@ -76,7 +76,7 @@ class Footer extends React.Component {
           <div className={Styles.box1}>
             <p>
               <i className="fa fa-copyright" aria-hidden="true"></i> Copyright
-              2020.All rights reserved.
+              2022. All rights reserved.
             </p>
           </div>
           <div className={Styles.box2}>
