@@ -14,8 +14,8 @@ export default function PricingComponent({
 			</div>
 			<div className={Styles.PriceContainerBody}>
 				<p>{planDetail1}</p>
-				<p>{planDetail2}</p>
-				<p>{planDetail3}</p>
+				{/* <p>{planDetail2}</p> */}
+				{/* <p>{planDetail3}</p> */}
 			</div>
 			<div className={Styles.PriceContainerFooter}>
 				<Link to="/sign-up">SIGN UP</Link>

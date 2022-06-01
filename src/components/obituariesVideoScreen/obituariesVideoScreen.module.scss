@@ -80,6 +80,9 @@
 //   }
 // }
 @media (max-width: 425px) {
+  .videoMainContainer{
+    height: 100vh !important;
+  }
   .borderContainer {
     width: 100%;
     height: 45vh !important;
