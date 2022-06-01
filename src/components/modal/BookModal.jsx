@@ -258,6 +258,11 @@ export default function BookModal(props) {
     },
     {
       id: 42,
+      name: "page28",
+      location: page28,
+    },
+    {
+      id: 43,
       name: "page29",
       location: page29,
     },

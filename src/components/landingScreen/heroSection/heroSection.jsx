@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Carousel, Col, Row } from "react-bootstrap";
 import slide1 from "../../../assets/first_slide.png";
 import slie2_img from "../../../assets/heroSlide.png";
-import slide2 from "../../../assets/second_slide.jpg";
 import BookModal from "../../modal";
 import Styles from "./heroSection.module.scss";
 export default function HeroSection() {
@@ -15,11 +14,13 @@ export default function HeroSection() {
 
   return (
     <Row className={`${Styles.mainContainer} `}>
-      <img
-        alt="slide background"
-        src={index === 0 ? slide1 : slide2}
-        className={Styles.hero_img}
-      ></img>
+      {index === 0 && (
+        <img
+          alt="slide background"
+          src={slide1}
+          className={Styles.hero_img}
+        ></img>
+      )}
       <BookModal show={modalShow} onHide={() => setModalShow(false)} />
       <Col md={12} lg={10} className={Styles.textContainer}>
         <Carousel interval={null} activeIndex={index} onSelect={handleSelect}>
@@ -43,13 +44,13 @@ export default function HeroSection() {
               </button>
             </div>
           </Carousel.Item>
-          <Carousel.Item className={`text-center akib  ${Styles.second_slide}`}>
+          <Carousel.Item className={`text-center   ${Styles.second_slide}`}>
             <div className="row display-flex">
               <div className="col-lg-5 pl-5">
                 <img
                   src={slie2_img}
                   alt="img"
-                  style={{ height: "300px", width: "300px" }}
+                  style={{ height: "300px", width: "320px" }}
                 ></img>
               </div>
               <div className={`col-lg-6 ${Styles.second_slide_container}`}>
