@@ -31,11 +31,14 @@
     .videoPlayer {
       position: relative;
       top: 225px;
+      border: 6px solid #40aabaab !important;
+      border-radius: 50% !important;
+     
       button {
         width: 70px;
         height: 70px;
-        background: rgba(71, 199, 205, 1);
-        border: none;
+        background: #47c6cd;
+        border: 5px solid #40aaba !important;
         border-radius: 100%;
         cursor: pointer;
         transition: background 0.8s;
@@ -80,7 +83,7 @@
 //   }
 // }
 @media (max-width: 425px) {
-  .videoMainContainer{
+  .videoMainContainer {
     height: 100vh !important;
   }
   .borderContainer {

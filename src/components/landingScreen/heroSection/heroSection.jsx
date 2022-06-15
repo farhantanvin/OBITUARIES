@@ -47,11 +47,7 @@ export default function HeroSection() {
           <Carousel.Item className={`text-center   ${Styles.second_slide}`}>
             <div className="row display-flex">
               <div className="col-lg-5 pl-5">
-                <img
-                  src={slie2_img}
-                  alt="img"
-                  style={{ height: "300px", width: "320px" }}
-                ></img>
+                <img src={slie2_img} alt="img"></img>
               </div>
               <div className={`col-lg-6 ${Styles.second_slide_container}`}>
                 <h2

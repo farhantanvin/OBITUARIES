@@ -1,11 +1,11 @@
 import React from "react";
+import { Nav, Navbar } from "react-bootstrap";
 import { withRouter } from "react-router";
 import { LinkContainer } from "react-router-bootstrap";
-import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import CrossIcon from "../../assets/cross.svg";
 import Logo from "../../assets/logo.png";
 import MenuIcon from "../../assets/menu.svg";
-import CrossIcon from "../../assets/cross.svg";
 import Styles from "./navbar.module.scss";
 
 class AppNavbar extends React.Component {
@@ -91,9 +91,9 @@ class AppNavbar extends React.Component {
             {getLink("/obituaries", "Obituaries")}
             {getLink("/plans-and-pricing", "Plans & Pricing")}
           </Nav>
-          <Nav className={`ml-auto ${Styles.navLinks}`}>
+          {/* <Nav className={`ml-auto ${Styles.navLinks}`}>
             <button className={Styles.recent_loss}>Recent Loss</button>
-          </Nav>
+          </Nav> */}
         </Navbar.Collapse>
       </Navbar>
     );
