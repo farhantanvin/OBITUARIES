@@ -28,12 +28,13 @@
       background-size: cover;
       overflow: hidden;
     }
+
     .videoPlayer {
       position: relative;
       top: 225px;
       border: 6px solid #40aabaab !important;
       border-radius: 50% !important;
-     
+
       button {
         width: 70px;
         height: 70px;
@@ -75,14 +76,44 @@
   }
 }
 
-// @media (max-width: 2500px) {
-//   .videoMainContainer {
-//     .borderContainer {
-//       margin: 13vh 0 13vh 0 !important;
-//     }
-//   }
-// }
+.circle {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  transform: scale(1.4);
+  z-index: 9999 !important;
+  top: -274px;
+  left: 45%;
+  width: 300px;
+  height: 300px;
+}
+
+.filledCircle {
+  opacity: 0.4;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.circle text {
+  font-size: 18px;
+  cursor: default;
+}
+
+.text_circle {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 9px;
+}
+
 @media (max-width: 425px) {
+  .circle {
+    top: -462px !important;
+    left: 34% !important;
+  }
   .videoMainContainer {
     height: 100vh !important;
   }
@@ -97,5 +128,11 @@
       position: relative;
       top: 140px !important;
     }
+  }
+}
+@media (max-width: 2600px) and (min-width: 2000px) {
+  .circle {
+    top: -270px !important;
+    left: 47% !important;
   }
 }
