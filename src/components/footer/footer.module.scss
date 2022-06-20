@@ -153,6 +153,7 @@
 	}
 	.subContainer{
 		@include flex(flex-start, flex-center, column);
+		gap: 30px;
 	}.box{
 		input{
 			width: 30vw;

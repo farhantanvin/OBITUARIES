@@ -206,7 +206,7 @@ class SearchObituaryForm extends React.Component {
 						</select>
 					</Col>
 				</Row>
-
+				<input ref={(e) => { this.keyword = e; }} className={Styles.searchKeywordInput} type="text" placeholder="Search by keyword" />
 				<button className={Styles.searchButton} onClick={() => { this.searchObituaries(); }}>
 					{
 						this.state.searchingObituaries

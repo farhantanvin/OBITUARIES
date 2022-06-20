@@ -3,12 +3,9 @@
 
 .mainContainer {
 	@include flex(initial, center, column);
-
-	min-height: 100vh;
 	margin-top: 60px;
-	padding: 40px 0 80px 0;
+	padding: 40px 0 0px 0;
 	background-image: url("../../assets/searchBackgroud.jpg");
-
 	h4 {
 		color: #48c9ce;
 		font-size: 40px;
@@ -38,5 +35,26 @@
 	.searchForm {
 		margin-top: 20px;
 		padding: 30px 0;
+	}
+}
+
+@media (max-width: 576px) {
+	.mainContainer {
+		h4{
+			font-size: 30px;
+		}
+		.searchForm {
+			margin-top: 10px;
+			padding: 0;
+		}
+
+		.addObituaryButton {
+			margin-right: 20px;
+			margin-bottom: 30px;
+			padding: 10px 0 10px 0;
+			width: 45vw;
+			text-align: center;
+			font-size: 13px;
+		}
 	}
 }

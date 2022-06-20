@@ -1,5 +1,6 @@
 import "bootstrap-icons/font/bootstrap-icons.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/footerLogo.png";
 import Styles from "./footer.module.scss";
 class Footer extends React.Component {
@@ -51,8 +52,10 @@ class Footer extends React.Component {
             <h4>Newsletter</h4>
             <p>Stay updated with recent news and discount</p>
             <div className="d-flex">
-              <input required type="email" placeholder="Your Email" />
-              <button>Send</button>
+              <form>
+              <input required type="email"placeholder="Your Email" />
+              <button type="submit">Send</button>
+              </form>
             </div>
           </div>
           <div className={Styles.box}>
@@ -82,11 +85,11 @@ class Footer extends React.Component {
           <div className={Styles.box2}>
             <ul className={Styles.footerMenu}>
               <li>
-                <a href="https://www.facebook.com/">Contact Us</a>
+                <Link to="/contact-us">Contact Us</Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="https://www.facebook.com/">Terms</a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
