@@ -11,7 +11,7 @@ export default function ObituariesVideoComponent() {
   };
 
   return (
-    <>
+    <div style={{ backgroundColor: "#d5f0f2" }}>
       <div className={Styles.videoMainContainer}>
         <div className={Styles.borderContainer}>
           <div className={Styles.videoContainer}></div>
@@ -52,6 +52,6 @@ export default function ObituariesVideoComponent() {
           </g>
         </svg>
       </div>
-    </>
+    </div>
   );
 }
