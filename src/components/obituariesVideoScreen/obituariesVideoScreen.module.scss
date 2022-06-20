@@ -86,6 +86,7 @@
   left: 45%;
   width: 300px;
   height: 300px;
+  
 }
 
 .filledCircle {
@@ -109,9 +110,15 @@
   letter-spacing: 9px;
 }
 
+@media (max-width: 380px) and (min-width: 350px) {
+  .circle {
+    top: -360px !important;
+    left: 34% !important;
+  }
+}
 @media (max-width: 425px) {
   .circle {
-    top: -462px !important;
+    top: -360px !important;
     left: 34% !important;
   }
   .videoMainContainer {
