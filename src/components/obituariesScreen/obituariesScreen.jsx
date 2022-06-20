@@ -8,7 +8,7 @@ class ObituariesScreen extends React.Component {
     return (
       <div className={Styles.mainContainer}>
         <Link to="/create-obituary" className={Styles.addObituaryButton}>
-          ADD NEW OBITUARY
+          ADD OBITUARY
         </Link>
         <h4>
           Search <span>Obituaries</span>

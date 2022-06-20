@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { withRouter } from "react-router";
 import { Route, Switch } from "react-router-dom";
+import ContactUsScreen from "../contactUsScreen/contactUsScreen";
 import CreateObituaryScreen from "../createObituaryScreen";
 import Footer from "../footer";
 import GetQuoteScreen from "../getQuoteScreen";
@@ -45,6 +46,7 @@ function App(props) {
           <Route path="/plans-and-pricing" component={PricingScreen} exact />
           <Route path="/obituary/:id" component={ObituaryScreen} exact />
           <Route path="/video" component={ObituariesVideoComponent} exact />
+          <Route path="/contact-us" component={ContactUsScreen} exact />
         </>
       </Switch>
       <Footer />

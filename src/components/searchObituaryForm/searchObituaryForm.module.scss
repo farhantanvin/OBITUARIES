@@ -56,9 +56,15 @@
 	.searchKeywordInput {
 		position: relative;
 		z-index: 3;
-		width: 300px;
+		width: 350px;
 		margin-top: 60px;
-		background: none;
+		background-color: transparent;
+		border: 0px;
+		outline: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		color:transparent;
 		color: #fff;
 		text-align: center;
 
@@ -75,7 +81,7 @@
 		z-index: 3;
 		width: 350px;
 		height: 60px;
-		margin-top: 80px;
+		margin-top: 10px;
 		background: #48c9ce;
 	}
 
@@ -192,6 +198,15 @@
 		.inputsContainer,
 		.dropdownsContainer {
 			width: 90%;
+			margin-top: 10px;
 		}
+
+	  input,select {
+		height: 60px;
+       }
+	.searchButton {
+		width: 70vw;
+		height: 50px;
+	}
 	}
 }
