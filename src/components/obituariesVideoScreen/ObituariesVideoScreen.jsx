@@ -11,7 +11,7 @@ export default function ObituariesVideoComponent() {
   };
 
   return (
-    <div style={{ backgroundColor: "#d5f0f2" }}>
+    <div className={Styles.video_section_Container}>
       <div className={Styles.videoMainContainer}>
         <div className={Styles.borderContainer}>
           <div className={Styles.videoContainer}></div>
@@ -31,6 +31,7 @@ export default function ObituariesVideoComponent() {
           height="300px"
           viewBox="0 0 300 300"
           xmlSpace="preserve"
+          className={Styles.video_svg}
         >
           <defs>
             <path
