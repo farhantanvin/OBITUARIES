@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import Styles from './pricingScreen.module.scss';
 
 export default function PricingComponent({
-	planName, planPrice, planDetail1, planDetail2, planDetail3, children
+	planName, planPrice, planDetail1, planDetail2, planDetail3,planDetail4,planDetail5,planDetail6, children
 }) {
 	return (
 		<div className={Styles.PriceContainer}>
@@ -13,8 +13,11 @@ export default function PricingComponent({
 			</div>
 			<div className={Styles.PriceContainerBody}>
 				<p>{planDetail1}</p>
-				{/* <p>{planDetail2}</p>
-				<p>{planDetail3}</p> */}
+				<p>{planDetail2}</p>
+				<p>{planDetail3}</p>
+				<p>{planDetail4}</p>
+				<p>{planDetail5}</p>
+				<p>{planDetail6}</p>
 			</div>
 			<div className={Styles.PriceContainerFooter}>
 				<Link to="/sign-up">SIGN UP</Link>

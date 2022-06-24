@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import Carousel from "react-elastic-carousel";
+import { useHistory } from "react-router-dom";
 import img1 from "../../../assets/recent-1.jpg";
 import img2 from "../../../assets/recent-2.jpg";
 import Styles from "./recentObituariesSection.module.scss";
 
 export default function RecentObituariesSection() {
+  const history = useHistory();
   const [obituariesData, setObituariesData] = useState([
     {
       id: "e72f0834-c9ff-32d0-8dc9-79a13caeafe1",
@@ -85,9 +87,9 @@ export default function RecentObituariesSection() {
           }
         </p>
         <div className="d-flex mt-5 align-items-center">
-          <button className={`${Styles.btn_contact} mr-3`}>CONTACT US</button>
+          <button onClick={() => history.push('/contact-us') } className={`${Styles.btn_contact} mr-3`}>CONTACT US</button>
 
-          <button className={`${Styles.btn_learn_more} mx-3`}>
+          <button onClick={() => history.push('/dashboard') } className={`${Styles.btn_learn_more} mx-3`}>
             Learn More
           </button>
         </div>
