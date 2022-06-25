@@ -135,10 +135,28 @@
 			p{
 				margin: 10px 15px 0px 15px;
 				font-weight: 350;
-				font-size: 14px;
+				font-size: 15px;
 			}
 		}
 	}
+}
+
+@media (max-width: 500px) {
+	.priceMainContainer {
+	
+		.PriceContainer{
+			height: 450px;
+		  }
+
+		.PriceContainerBody{
+			p{
+				margin: 10px 10px 0px 10px;
+				font-weight: 350;
+				font-size: 12.5px;
+			}
+		}
+	}
+
 }
 
 
