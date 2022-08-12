@@ -3,49 +3,53 @@ import { Button, Modal } from "react-bootstrap";
 import { BiSkipPrevious } from "react-icons/bi";
 import { RiSkipForwardMiniFill } from "react-icons/ri";
 import HTMLFlipBook from "react-pageflip";
-import childhood2 from "../../assets/books/Childhood ana Youth 2nd.svg";
-import childhood1 from "../../assets/books/Childhood ana Youth.svg";
-import lifecycle2 from "../../assets/books/HIS CIRCLE OF LIFE 2nd.svg";
-import lifecycle1 from "../../assets/books/HIS CIRCLE OF LIFE.svg";
-import loving2 from "../../assets/books/In Loving Memory 2nd.svg";
-import loving1 from "../../assets/books/In Loving Memory.svg";
-import lhistory2 from "../../assets/books/LIFE HISTORY in picture 2nd.svg";
-import lhistory from "../../assets/books/LIFE HISTORY in picture.svg";
-import lhistoryjohn2 from "../../assets/books/LIFE HISTORY OF John smith 2nd.svg";
-import lhistoryjohn from "../../assets/books/LIFE HISTORY OF John smith.svg";
-import loveLife2 from "../../assets/books/Love and Life 2nd.svg";
-import loveLife from "../../assets/books/Love and Life.svg";
-import page29 from "../../assets/books/Obituary Book Golden back Cover.svg";
+import childhood2 from "../../assets/books/Childhood ana Youth 2nd.jpg";
+import childhood1 from "../../assets/books/Childhood ana Youth.jpg";
+import lifecycle2 from "../../assets/books/HIS CIRCLE OF LIFE 2nd.jpg";
+import lifecycle1 from "../../assets/books/HIS CIRCLE OF LIFE.jpg";
+import loving2 from "../../assets/books/In Loving Memory 2nd.jpg";
+import loving1 from "../../assets/books/In Loving Memory.jpg";
+import lhistory2 from "../../assets/books/LIFE HISTORY in picture 2nd.jpg";
+import lhistory from "../../assets/books/LIFE HISTORY in picture.jpg";
+import lhistoryjohn2 from "../../assets/books/LIFE HISTORY OF John smith 2nd.jpg";
+import lhistoryjohn from "../../assets/books/LIFE HISTORY OF John smith.jpg";
+import loveLife2 from "../../assets/books/Love and Life 2nd.jpg";
+import loveLife from "../../assets/books/Love and Life.jpg";
+import page29 from "../../assets/books/Obituary Book Golden back Cover.jpg";
 import {
   default as page1,
   default as page11,
-} from "../../assets/books/Page 1.svg";
-import page9 from "../../assets/books/Page 10.svg";
-import page10 from "../../assets/books/Page 11.svg";
-import page12 from "../../assets/books/Page 12.svg";
-import page13 from "../../assets/books/Page 13.svg";
-import page14 from "../../assets/books/Page 14.svg";
-import page15 from "../../assets/books/Page 15.svg";
-import page16 from "../../assets/books/Page 16.svg";
-import page17 from "../../assets/books/Page 17.svg";
-import page18 from "../../assets/books/Page 18.svg";
-import page19 from "../../assets/books/Page 19.svg";
-import page2 from "../../assets/books/Page 2.svg";
-import page20 from "../../assets/books/Page 20.svg";
-import page21 from "../../assets/books/Page 21.svg";
-import page22 from "../../assets/books/Page 22.svg";
-import page23 from "../../assets/books/Page 23.svg";
-import page24 from "../../assets/books/Page 24.svg";
-import page25 from "../../assets/books/Page 25.svg";
-import page26 from "../../assets/books/Page 26.svg";
-import page27 from "../../assets/books/Page 27.svg";
-import page28 from "../../assets/books/Page 28.svg";
-import page3 from "../../assets/books/Page 3.svg";
-import page4 from "../../assets/books/Page 5.svg";
-import page5 from "../../assets/books/Page 6.svg";
-import page6 from "../../assets/books/Page 7.svg";
-import page7 from "../../assets/books/Page 8.svg";
-import page8 from "../../assets/books/Page 9.svg";
+} from "../../assets/books/Page 1.jpg";
+import page9 from "../../assets/books/Page 10.jpg";
+import page10 from "../../assets/books/Page 11.jpg";
+import page12 from "../../assets/books/Page 12.jpg";
+import page13 from "../../assets/books/Page 13.jpg";
+import page14 from "../../assets/books/Page 14.jpg";
+import page15 from "../../assets/books/Page 15.jpg";
+import page16 from "../../assets/books/Page 16.jpg";
+import page17 from "../../assets/books/Page 17.jpg";
+import page18 from "../../assets/books/Page 18.jpg";
+import page19 from "../../assets/books/Page 19.jpg";
+import page2 from "../../assets/books/Page 2.jpg";
+import page20 from "../../assets/books/Page 20.jpg";
+import page21 from "../../assets/books/Page 21.jpg";
+import page22 from "../../assets/books/Page 22.jpg";
+import page23 from "../../assets/books/Page 23.jpg";
+import page24 from "../../assets/books/Page 24.jpg";
+import page25 from "../../assets/books/Page 25.jpg";
+import page26 from "../../assets/books/Page 26.jpg";
+import page27 from "../../assets/books/Page 27.jpg";
+import page28 from "../../assets/books/Page 28.jpg";
+import page30 from "../../assets/books/Page 29.jpg";
+import page3 from "../../assets/books/Page 3.jpg";
+import page31 from "../../assets/books/Page 30.jpg";
+import page32 from "../../assets/books/Page 31.jpg";
+import page33 from "../../assets/books/Page 32.jpg";
+import page4 from "../../assets/books/Page 5.jpg";
+import page5 from "../../assets/books/Page 6.jpg";
+import page6 from "../../assets/books/Page 7.jpg";
+import page7 from "../../assets/books/Page 8.jpg";
+import page8 from "../../assets/books/Page 9.jpg";
 import Styles from "./bookModal.module.scss";
 import { PageCover } from "./PageCover";
 export default function BookModal(props) {
@@ -257,10 +261,31 @@ export default function BookModal(props) {
       location: page28,
     },
     {
-      id: 42,
+      id: 411,
       name: "page28",
       location: page28,
     },
+    {
+      id: 44,
+      name: "page30",
+      location: page30,
+    },
+    {
+      id: 45,
+      name: "page31",
+      location: page31,
+    },
+    {
+      id: 46,
+      name: "page32",
+      location: page32,
+    },
+    {
+      id: 47,
+      name: "page33",
+      location: page33,
+    },
+
     {
       id: 43,
       name: "page29",

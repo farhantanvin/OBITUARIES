@@ -1,14 +1,30 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Carousel, Col, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import slide1 from "../../../assets/first_slide.png";
 import slide2 from "../../../assets/heroslidere.png";
+import slide2_mobile from "../../../assets/slide2-mobile.jpeg";
 
 import BookModal from "../../modal";
 import Styles from "./heroSection.module.scss";
 export default function HeroSection() {
   const [index, setIndex] = useState(0);
   const [modalShow, setModalShow] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // method to update the width size
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth);
+  };
+
+  // create a eventListener to update the width every time the user resize the window
+  useEffect(() => {
+    handleWindowSizeChange();
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
 
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
@@ -25,7 +41,7 @@ export default function HeroSection() {
       ) : (
         <img
           alt="slide background"
-          src={slide2}
+          src={width < 450 ? slide2_mobile : slide2}
           className={Styles.hero_img2}
         ></img>
       )}
