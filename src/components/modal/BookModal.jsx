@@ -18,7 +18,7 @@ import loveLife from "../../assets/books/Love and Life.jpg";
 import page29 from "../../assets/books/Obituary Book Golden back Cover.jpg";
 import {
   default as page1,
-  default as page11,
+  default as page11
 } from "../../assets/books/Page 1.jpg";
 import page9 from "../../assets/books/Page 10.jpg";
 import page10 from "../../assets/books/Page 11.jpg";
@@ -57,163 +57,163 @@ export default function BookModal(props) {
   const [images, setImages] = useState([
     {
       id: 1,
-      name: "childhood1",
-      location: childhood1,
-    },
-    {
-      id: 2,
-      name: "childhood2",
-      location: childhood2,
-    },
-    {
-      id: 3,
-      name: "lifecycle1",
-      location: lifecycle1,
-    },
-    {
-      id: 4,
-      name: "lifecycle2",
-      location: lifecycle2,
-    },
-    {
-      id: 5,
       name: "loving1",
       location: loving1,
     },
     {
-      id: 6,
+      id: 2,
       name: "loving2",
       location: loving2,
     },
     {
-      id: 7,
-      name: "lhistory",
-      location: lhistory,
-    },
-    {
-      id: 8,
-      name: "lhistory2",
-      location: lhistory2,
-    },
-    {
-      id: 9,
-      name: "lhistoryjohn",
-      location: lhistoryjohn,
-    },
-    {
-      id: 10,
-      name: "lhistoryjohn2",
-      location: lhistoryjohn2,
-    },
-    {
-      id: 11,
-      name: "loveLife",
-      location: loveLife,
-    },
-    {
-      id: 12,
-      name: "loveLife2",
-      location: loveLife2,
-    },
-    {
-      id: 13,
+      id: 3,
       name: "page1",
       location: page1,
     },
     {
-      id: 14,
+      id: 4,
       name: "page2",
       location: page2,
     },
     {
-      id: 15,
+      id: 5,
       name: "page3",
       location: page3,
     },
     {
-      id: 16,
+      id: 6,
       name: "page4",
       location: page4,
     },
     {
-      id: 17,
+      id: 7,
+      name: "childhood1",
+      location: childhood1,
+    },
+    {
+      id: 8,
+      name: "childhood2",
+      location: childhood2,
+    },
+    {
+      id: 9,
       name: "page5",
       location: page5,
     },
     {
-      id: 18,
+      id: 10,
       name: "page6",
       location: page6,
     },
     {
-      id: 19,
-      name: "page1",
-      location: page1,
-    },
-    {
-      id: 20,
+      id: 11,
       name: "page7",
       location: page7,
     },
     {
-      id: 21,
+      id: 12,
       name: "page8",
       location: page8,
     },
     {
-      id: 22,
+      id: 13,
+      name: "loveLife",
+      location: loveLife,
+    },
+    {
+      id: 14,
+      name: "loveLife2",
+      location: loveLife2,
+    },
+    {
+      id: 15,
       name: "page9",
       location: page9,
     },
     {
-      id: 23,
+      id: 16,
       name: "page10",
       location: page10,
     },
     {
-      id: 24,
+      id: 17,
       name: "page11",
       location: page11,
     },
     {
-      id: 25,
+      id: 18,
       name: "page12",
       location: page12,
     },
     {
-      id: 26,
+      id: 19,
+      name: "lifecycle1",
+      location: lifecycle1,
+    },
+    {
+      id: 20,
+      name: "lifecycle2",
+      location: lifecycle2,
+    },
+    {
+      id: 21,
       name: "page13",
       location: page13,
     },
     {
-      id: 27,
+      id: 22,
       name: "page14",
       location: page14,
     },
     {
-      id: 28,
+      id: 23,
       name: "page15",
       location: page15,
     },
     {
-      id: 29,
+      id: 24,
       name: "page16",
       location: page16,
     },
     {
-      id: 30,
+      id: 25,
+      name: "page30",
+      location: page30,
+    },
+    {
+      id: 26,
+      name: "page31",
+      location: page31,
+    },
+    {
+      id: 27,
+      name: "page1",
+      location: page1,
+    },
+    {
+      id: 28,
       name: "page17",
       location: page17,
     },
     {
-      id: 31,
+      id: 29,
       name: "page18",
       location: page18,
     },
     {
-      id: 32,
+      id: 30,
       name: "page19",
       location: page19,
+    },
+    {
+      id: 31,
+      name: "page32",
+      location: page32,
+    },
+    {
+      id: 32,
+      name: "page33",
+      location: page33,
     },
     {
       id: 33,
@@ -227,23 +227,23 @@ export default function BookModal(props) {
     },
     {
       id: 35,
-      name: "page22",
-      location: page22,
-    },
-    {
-      id: 36,
-      name: "page23",
-      location: page23,
-    },
-    {
-      id: 37,
       name: "page24",
       location: page24,
     },
     {
-      id: 38,
+      id: 36,
       name: "page25",
       location: page25,
+    },
+    {
+      id: 37,
+      name: "lhistory",
+      location: lhistory,
+    },
+    {
+      id: 38,
+      name: "lhistory2",
+      location: lhistory2,
     },
     {
       id: 39,
@@ -261,33 +261,32 @@ export default function BookModal(props) {
       location: page28,
     },
     {
-      id: 411,
+      id: 42,
       name: "page28",
       location: page28,
     },
     {
+      id: 43,
+      name: "lhistoryjohn",
+      location: lhistoryjohn,
+    },
+    {
       id: 44,
-      name: "page30",
-      location: page30,
+      name: "lhistoryjohn2",
+      location: lhistoryjohn2,
     },
     {
       id: 45,
-      name: "page31",
-      location: page31,
+      name: "page22",
+      location: page22,
     },
     {
       id: 46,
-      name: "page32",
-      location: page32,
+      name: "page23",
+      location: page23,
     },
     {
       id: 47,
-      name: "page33",
-      location: page33,
-    },
-
-    {
-      id: 43,
       name: "page29",
       location: page29,
     },
