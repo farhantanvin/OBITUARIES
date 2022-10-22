@@ -53,13 +53,13 @@ export default function HeroSection() {
               <h2 className={`my-3 text-light ${Styles.main_text}`}>
                 Celebrating the Life of Loved Ones Passed Begins Here
               </h2>
-              <span className="my-3 text-center  px-5 text-light">
+              <span className={`my-3 text-center  px-5 text-light ${Styles.sub_text}`}>
                 We Support You With The Best Options to Make Their Journey One
                 Less Thing to Worry About.
               </span>
             </div>
 
-            <div className="d-flex justify-content-center align-items-center my-3">
+            <div className={`d-flex justify-content-center align-items-center my-3 ${Styles.btn_container}`}>
               <Link to="/dashboard">
                 <button className={`mx-3 ${Styles.btn_learn_more}`}>
                   Learn more
