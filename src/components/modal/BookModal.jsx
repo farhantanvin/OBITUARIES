@@ -54,6 +54,7 @@ import Styles from "./bookModal.module.scss";
 import { PageCover } from "./PageCover";
 export default function BookModal(props) {
   const book = useRef();
+  // eslint-disable-next-line no-unused-vars
   const [images, setImages] = useState([
     {
       id: 1,

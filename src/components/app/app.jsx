@@ -15,6 +15,7 @@ import SignInScreen from "../signInScreen";
 import SignUpScreen from "../signUpScreen";
 
 function App(props) {
+  // eslint-disable-next-line no-unused-vars
   const [showNavbar, setShowNavbar] = useState(false);
 
   useEffect(() => {

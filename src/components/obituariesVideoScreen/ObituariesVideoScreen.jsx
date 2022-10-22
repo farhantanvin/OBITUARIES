@@ -4,7 +4,6 @@ import Styles from "./obituariesVideoScreen.module.scss";
 export default function ObituariesVideoComponent() {
   const id = "Isuns4qj2MI";
   const [status, setStatus] = useState(false);
-  const videoUrl = `https://www.youtube.com/watch?v=${id}`;
 
   const togglePlayer = () => {
     !status ? setStatus(true) : setStatus(false);

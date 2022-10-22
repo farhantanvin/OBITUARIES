@@ -8,6 +8,8 @@ import Styles from "./recentObituariesSection.module.scss";
 
 export default function RecentObituariesSection() {
   const history = useHistory();
+
+  // eslint-disable-next-line no-unused-vars
   const [obituariesData, setObituariesData] = useState([
     {
       id: "e72f0834-c9ff-32d0-8dc9-79a13caeafe1",
