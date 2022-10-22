@@ -17,13 +17,16 @@
   opacity: 0.1;
   object-fit: cover;
   width: -webkit-fill-available;
-  height: 600px;
+  height: 580px;
+  margin-left: -10px;
 }
 .hero_img2 {
   position: absolute;
   object-fit: cover;
   width: -webkit-fill-available;
   height: 600px;
+  width: 100%;
+  margin-left: -10px;
 }
 .btn_contact {
   border: 2px solid #1e7f8c;
@@ -57,6 +60,34 @@
 .second_slide_container {
   padding: 50px;
 }
+
+@media (max-width: 435px) {
+  .main_text {
+    font-size: 20px !important;
+    font-weight: 600 !important;
+  }
+  .sub_text{
+    font-size: 16px !important;
+  }
+.btn_container{
+  margin-top: 40px !important;
+}
+  .btn_contact {
+    padding: 5px 15px;
+  }
+
+  .btn_learn_more {
+    padding: 5px 15px;
+  }
+  .second_slide_title {
+    font-size: 16px !important;
+  }
+
+  .second_slide_container {
+    margin-top: 58px;
+  }
+}
+
 @media (max-width: 992px) {
   .mainContainer .blobContainer {
     position: absolute;
@@ -73,26 +104,5 @@
     position: relative;
     z-index: 2;
     padding: 150px 9vw 150px 9vw;
-  }
-}
-@media (max-width: 425px) {
-  .main_text {
-    font-size: 25px !important;
-    font-weight: 600 !important;
-  }
-
-  .btn_contact {
-    padding: 5px 15px;
-  }
-
-  .btn_learn_more {
-    padding: 5px 15px;
-  }
-  .second_slide_title {
-    font-size: 16px !important;
-  }
-
-  .second_slide_container {
-    margin-top: 58px;
   }
 }
